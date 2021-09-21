@@ -6,15 +6,15 @@ auth = Blueprint = Blueprint('auth',__name__)
 
 @auth.route('/login')
 def login():
-    return ('auth/login.html')
+    return render_template('auth/login.html')
 
-@auth.route('logout')
+@auth.route('/logout')
 def logout():
     return '<p>Logout</p>'
 
-@auth.route('sign-up')
+@auth.route('/signup')
 def signup():
-    return ('auth/sign_up.html')
+    return render_template('auth/sign_up.html')
 
 
 
