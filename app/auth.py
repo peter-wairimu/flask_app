@@ -23,11 +23,11 @@ def signup():
         if len(email) < 8:
             flash('Email must be greater than 8 characters', category='error')
         elif len(firstName) < 2:
-            flash('Email must be greater than 8 characters', category='error')
-        elif password1 != password2:
-            flash('Password did not match ', category='error')
-        elif len(password1) < 8:
-            flash('password must be atleast  8 characters', category='error')
+            flash('Name must greater than 2 characters', category='error')
+        if password1 != password2:
+            flash('Passwords don\'t match ', category='error')
+        # elif len(password1)<7:
+        #     flash('password must be atleast  7 characters', category='error')
         else:
             # add user to database
             flash('Account created succefully',category='success')
