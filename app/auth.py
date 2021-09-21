@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint,render_template
 
 
 auth = Blueprint = Blueprint('auth',__name__)
@@ -6,15 +6,15 @@ auth = Blueprint = Blueprint('auth',__name__)
 
 @auth.route('/login')
 def login():
-    return "<p>login</p>"
+    return ('auth/login.html')
 
 @auth.route('logout')
 def logout():
-    return '<p>logout</p>'
+    return '<p>Logout</p>'
 
 @auth.route('sign-up')
 def signup():
-    return '<p>sign up</p>'
+    return ('auth/sign_up.html')
 
 
 
