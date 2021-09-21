@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,request
 
 
 auth = Blueprint = Blueprint('auth',__name__)
@@ -6,6 +6,8 @@ auth = Blueprint = Blueprint('auth',__name__)
 
 @auth.route('/login',methods =['GET','POST'])
 def login():
+    data = request.form
+    print(data)
     return render_template('auth/login.html')
 
 @auth.route('/logout')
